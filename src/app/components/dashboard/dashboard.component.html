@@ -1,0 +1,34 @@
+
+
+<div class="container">
+<div class=" hold row" *ngFor="let data of statewiseData">
+    <span class="country">India</span><span class="badge badge-success">Live</span>
+    <span class="col-md-4 offset-1 updated"><strong>Last Updated:</strong>
+      <em>{{data.lastRefreshed}}</em>
+    </span>
+      <div class="widgets"> 
+        <span class="col-sm-2 label bg-secondary">Confirmed</span> 
+        <span class="col-sm-2 offset-1 label bg-warning" >Active</span>
+        <span class="col-sm-2 offset-1 label bg-success">Recovered</span>
+        <span class="col-sm-2 offset-1 label bg-danger">Deceased</span>
+      </div>
+
+      <div class="records" *ngFor="let data of indiaCovidData" >
+        <span class=" data-label">{{data.confirmed| number: '1.0':'en-UK'}}</span>
+          <span class="data-label">{{data.active | number: '1.0':'en-UK'}}</span>
+            <span class="data-label">{{data.recovered | number: '1.0':'en-UK'}}</span>
+            <span class="data-label">{{data.deaths | number: '1.0':'en-UK'}}</span>
+        </div>
+  
+</div>
+
+<!--  All countries data-->
+<div class="row">
+  
+</div>
+
+
+ </div>
+
+
+

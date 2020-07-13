@@ -1,0 +1,71 @@
+
+.info{
+    width: auto;
+    height: auto;
+    margin-top: 58px;
+}
+.ttotal,.tdeath,.trecover,.tactive{
+    font-size: 18px;
+    font-family: monospace;
+    color: red;
+}
+.data-label{
+    margin-left: 26px;
+    color: #2e2a2a;
+    font-size: 22px;
+    margin-top: -8px;
+   
+}
+.row{
+    display:block;
+    margin-left: -87px;
+    width: 59%;
+}
+
+.contents{
+    margin-top: 45px;
+    margin-left: -113px;
+}
+.country{
+    font-size: 35px;
+    font-family: monospace;
+    margin-left: 21px;
+
+}
+.container{
+    margin-left: 98px !important;
+}
+.bg-light {
+    background-color: #f8f9fa!important; 
+}
+.label{
+    color: white;
+    border-radius: 12px;
+    font-family: monospace;
+    font-size: 16px;
+    margin-left: 4px;
+    
+}
+.records{
+    margin-left: -14px;
+}
+.val{
+    background-color: lighten($color: #000000, $amount: 0);
+}
+
+.hold{
+
+    width: 40%;
+    border-radius: 13px;
+    background-color: #eaf1f7;
+    height: 158px;
+}
+.widgets{
+    width:15%;
+}
+.updated{
+    font-size: 13px;
+    font-family: monospace;
+    color: #181896;
+    margin-left: -3px;
+}

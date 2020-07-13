@@ -1,11 +1,16 @@
 .navbar-brand{
-    color:#ffff;
+    color:rgb(243, 93, 93);
     font-family: 'Tahoma';
     font-weight: 200px;
     font-size: 1.7rem !important;
     
 }
-
-.navbar{
-    background-color: #6480b0;
+hr.nav-hr{
+    border: 1px solid rgb(175, 182, 175);
+   border-top: 2px;;
+}
+.title{
+    margin-left: -10px;
+    font-family: monospace;
+    font-size: 32px;
 }
