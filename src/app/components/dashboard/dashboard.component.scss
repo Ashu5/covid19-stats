@@ -18,7 +18,7 @@
 }
 .row{
     display:block;
-    margin-left: -87px;
+    margin-left: 0px;
     width: 59%;
 }
 
@@ -33,7 +33,7 @@
 
 }
 .container{
-    margin-left: 98px !important;
+    margin-left: 0px !important;
 }
 .bg-light {
     background-color: #f8f9fa!important; 
@@ -67,5 +67,8 @@
     font-size: 13px;
     font-family: monospace;
     color: #181896;
-    margin-left: -3px;
+    margin-left: 13px;
+}
+.mat{
+    width: 43%;
 }

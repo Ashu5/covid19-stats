@@ -1,11 +1,14 @@
 
 
 <div class="container">
-<div class=" hold row" *ngFor="let data of statewiseData">
-    <span class="country">India</span><span class="badge badge-success">Live</span>
-    <span class="col-md-4 offset-1 updated"><strong>Last Updated:</strong>
+<mat-card class="mat">
+<div class="flex" *ngFor="let data of statewiseData">
+    <span class="country">India</span>
+    <span class=" live badge badge-success">Live</span>
+    <span class="updated"><strong>Last Updated:</strong>
       <em>{{data.lastRefreshed}}</em>
     </span>
+    
       <div class="widgets"> 
         <span class="col-sm-2 label bg-secondary">Confirmed</span> 
         <span class="col-sm-2 offset-1 label bg-warning" >Active</span>
@@ -21,6 +24,7 @@
         </div>
   
 </div>
+</mat-card>
 
 <!--  All countries data-->
 <div class="row">
