@@ -13,6 +13,7 @@ export class DashboardComponent implements OnInit {
 ttotal:number=11111;
 indiaCovidData:any[]=[];
 statewiseData:any[]=[];
+globalCovidDataArray:any[]=[];
 
   getData(){
     this.service.getIndiaCovidData()
@@ -26,10 +27,18 @@ statewiseData:any[]=[];
     });
   }
 
+  getGlobalData(){
+    this.service.getGlobalCovidData()
+    .subscribe((responseData)=>{
+    this.globalCovidDataArray.push(responseData);
+    console.log("Global Data",this.globalCovidDataArray);
+    });
+  }
+
 
   ngOnInit() {
     this.getData();
-    
+    this.getGlobalData();
   }
 
 }

@@ -1,38 +1,67 @@
+<div class="container-fluid">
+  <div class="d-flex">
+    <mat-card>
+      <div  *ngFor="let data of statewiseData">
+        <span class="country">India</span>
+        <span class=" live badge badge-success">Live</span>
+        <span class="updated"><strong>Last Updated:</strong>
+          <em>{{data.lastRefreshed |date:'medium'}}</em>
+        </span>
+
+        <div class="widgets">
+          <span class="col-sm-2 label bg-secondary">Confirmed</span>
+          <span class="col-sm-2 offset-1 label bg-warning">Active</span>
+          <span class="col-sm-2 offset-1 label bg-success">Recovered</span>
+          <span class="col-sm-2 offset-1 label bg-danger">Deceased</span>
+        </div>
+
+        <div class="records" *ngFor="let data of indiaCovidData">
+          <span class=" data-label">{{data.confirmed| number: '1.0':'en-UK'}}</span>
+          <span class="data-label">{{data.active | number: '1.0':'en-UK'}}</span>
+          <span class="data-label">{{data.recovered | number: '1.0':'en-UK'}}</span>
+          <span class="data-label">{{data.deaths | number: '1.0':'en-UK'}}</span>
+        </div>
+
+      </div>
+
+    </mat-card>
 
 
-<div class="container">
-<mat-card class="mat">
-<div class="flex" *ngFor="let data of statewiseData">
-    <span class="country">India</span>
-    <span class=" live badge badge-success">Live</span>
-    <span class="updated"><strong>Last Updated:</strong>
-      <em>{{data.lastRefreshed}}</em>
-    </span>
+<div class="mat"></div>
     
-      <div class="widgets"> 
-        <span class="col-sm-2 label bg-secondary">Confirmed</span> 
-        <span class="col-sm-2 offset-1 label bg-warning" >Active</span>
+<div class="d-flex" >
+  <mat-card>
+    <div  *ngFor="let data of globalCovidDataArray">
+      <span class="country">Global</span>
+      <span class=" live badge badge-success">Live</span>
+      <span class="updated"><strong>Last Updated:</strong>
+        <em>{{data.created|date:'medium'}}</em>
+      </span>
+
+      <div class="widgets global">
+        <span class="col-sm-2 label bg-secondary">Confirmed</span>
+        <span class="col-sm-2 offset-1 label bg-warning">Active</span>
         <span class="col-sm-2 offset-1 label bg-success">Recovered</span>
         <span class="col-sm-2 offset-1 label bg-danger">Deceased</span>
       </div>
 
-      <div class="records" *ngFor="let data of indiaCovidData" >
-        <span class=" data-label">{{data.confirmed| number: '1.0':'en-UK'}}</span>
-          <span class="data-label">{{data.active | number: '1.0':'en-UK'}}</span>
-            <span class="data-label">{{data.recovered | number: '1.0':'en-UK'}}</span>
-            <span class="data-label">{{data.deaths | number: '1.0':'en-UK'}}</span>
-        </div>
-  
+      <div class="records">
+        <span class="data-label">{{data.totalConfirmed| number: '1.0':'en-UK'}}</span>
+        <span class="data-label">{{data.totalActiveCases | number: '1.0':'en-UK'}}</span>
+        <span class="data-label">{{data.totalRecovered | number: '1.0':'en-UK'}}</span>
+        <span class="data-label">{{data.totalDeaths | number: '1.0':'en-UK'}}</span>
+      </div>
+
+    </div>
+
+  </mat-card>
+
+
 </div>
-</mat-card>
+    
+  </div>
 
-<!--  All countries data-->
-<div class="row">
-  
+  <!--first card ends-->
+
+  <!--container ends-->
 </div>
-
-
- </div>
-
-
-

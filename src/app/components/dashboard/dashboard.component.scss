@@ -27,7 +27,7 @@
     margin-left: -113px;
 }
 .country{
-    font-size: 35px;
+    font-size: 27px;
     font-family: monospace;
     margin-left: 21px;
 
@@ -49,6 +49,7 @@
 .records{
     margin-left: -14px;
 }
+
 .val{
     background-color: lighten($color: #000000, $amount: 0);
 }
@@ -60,7 +61,7 @@
     background-color: #eaf1f7;
     height: 158px;
 }
-.widgets{
+.widgets,.global{
     width:15%;
 }
 .updated{
@@ -70,5 +71,5 @@
     margin-left: 13px;
 }
 .mat{
-    width: 43%;
+  margin-left: 29%;
 }

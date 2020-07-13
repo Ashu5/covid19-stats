@@ -8,9 +8,13 @@ import { catchError, retry } from 'rxjs/operators';
 export class DataService {
 
   constructor(private httpClient:HttpClient) { }
-private dataURL:string='https://api.rootnet.in/covid19-in/unofficial/covid19india.org/statewise';
-
+private indiaURL:string='https://api.rootnet.in/covid19-in/unofficial/covid19india.org/statewise';
+private globalURL:string='https://api.coronatracker.com/v3/stats/worldometer/global';
    getIndiaCovidData(){
-   return this.httpClient.get(this.dataURL);
+   return this.httpClient.get(this.indiaURL);
+  }
+
+  getGlobalCovidData(){
+    return this.httpClient.get(this.globalURL);
   }
 }
