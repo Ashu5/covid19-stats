@@ -1,13 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import {DataService} from '../../services/data.service';
 import {map} from 'rxjs/operators';
+
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
- 
+  
   constructor(private service:DataService) { }
   
 ttotal:number=11111;
@@ -34,11 +36,14 @@ globalCovidDataArray:any[]=[];
     console.log("Global Data",this.globalCovidDataArray);
     });
   }
-
-
+ 
+  
   ngOnInit() {
     this.getData();
     this.getGlobalData();
   }
+
+
+  
 
 }

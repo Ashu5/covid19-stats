@@ -10,11 +10,17 @@ export class DataService {
   constructor(private httpClient:HttpClient) { }
 private indiaURL:string='https://api.rootnet.in/covid19-in/unofficial/covid19india.org/statewise';
 private globalURL:string='https://api.coronatracker.com/v3/stats/worldometer/global';
+private globalDataByCountryURL:string='https://api.coronatracker.com/v3/stats/worldometer/country';
    getIndiaCovidData(){
    return this.httpClient.get(this.indiaURL);
   }
 
   getGlobalCovidData(){
     return this.httpClient.get(this.globalURL);
+  }
+
+
+  getCovidDataByCountry(){
+ return this.httpClient.get(this.globalDataByCountryURL);
   }
 }
