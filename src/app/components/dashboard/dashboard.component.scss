@@ -38,12 +38,16 @@
     color: white;
     border-radius: 12px;
     font-family: monospace;
-    font-size: 16px;
+    font-size: 18px;
     margin-left: 4px;
     
 }
 .records{
     margin-left: -14px;
+    margin-top: 14px;
+}
+.india-record{
+    margin-left: 34px;
 }
 
 .val{
@@ -59,6 +63,7 @@
 }
 .widgets,.global{
     width:15%;
+    margin-top: 14px;
 }
 .updated{
     font-size: 13px;
@@ -73,4 +78,26 @@ table {
     width: 100%;
     margin-top: 28px;
   }
-  
+  .casuality{
+    width: 33%;
+    margin-left: 18px;
+    margin-right: 18px;
+}
+.casuality-text{
+    font-size: 16px;
+    font-family: monospace;
+    color: blue;
+    width:100px;
+}
+
+.casuality-text-active{
+    font-size: 16px;
+    font-family: monospace;
+    color: red;
+    margin-top: 10px;
+    width:100px;
+}
+ .chart{
+     margin-left: 20px;
+     margin-right: 20px;;
+ }

@@ -13,13 +13,16 @@ import { GlobaldataComponent } from './components/globaldata/globaldata.componen
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
 import {MatSortModule} from '@angular/material/sort';
+import { ChartComponent } from './components/chart/chart.component';
+import { ChartsModule } from 'ng2-charts';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
     DashboardComponent,
-    GlobaldataComponent
+    GlobaldataComponent,
+    ChartComponent
     
   ],
   imports: [
@@ -31,7 +34,8 @@ import {MatSortModule} from '@angular/material/sort';
     MatTableModule,
     MatProgressBarModule,
     Ng4LoadingSpinnerModule,
-    MatSortModule
+    MatSortModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

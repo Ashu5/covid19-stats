@@ -2,11 +2,13 @@
   <div class="d-flex">
     <mat-card *ngIf="statewiseData else loading">
       <div *ngFor="let data of statewiseData">
+      
         <span class="country">India</span>
         <span class=" live badge badge-success">Live</span>
         <span class="updated"><strong>Last Updated:</strong>
           <em>{{data.lastRefreshed |date:'medium'}}</em>
         </span>
+      
 
         <div class="widgets">
           <span class="col-sm-2 label bg-secondary">Confirmed</span>
@@ -15,15 +17,12 @@
           <span class="col-sm-2 offset-1 label bg-danger">Deceased</span>
         </div>
 
-        <div class="records" *ngFor="let data of indiaCovidData">
-          <span class=" data-label">{{data.confirmed| number: '1.0':'en-UK'}}</span>
-          <span class="data-label">{{data.active | number: '1.0':'en-UK'}}</span>
-          <span class="data-label">{{data.recovered | number: '1.0':'en-UK'}}</span>
-          <span class="data-label">{{data.deaths | number: '1.0':'en-UK'}}</span>
+        <div class="records " *ngFor="let data of indiaCovidData">
+          <span class=" data-label india-record">{{data.confirmed| number: '1.0':'en-UK'}}</span>
+          <span class="data-label india-record">{{data.active | number: '1.0':'en-UK'}}</span>
+          <span class="data-label india-record">{{data.recovered | number: '1.0':'en-UK'}}</span>
+          <span class="data-label india-record">{{data.deaths | number: '1.0':'en-UK'}}</span>
         </div>
-
-
-
 
       </div>
       <ng-template #loading>
@@ -32,9 +31,19 @@
 
     </mat-card>
 
+   
+      
+        <!-- <div>
+          <span class="casuality-text">Total Deaths Worldwide:</span><br>
+          <span class="casuality-text-active">Total Active Worldwide:</span>
+        </div> -->
+        <mat-card class="chart">
+          <app-chart></app-chart>
 
-
-    <div class="mat"></div>
+        </mat-card>
+       
+   
+  
 
     <div class="d-flex">
       <mat-card>
@@ -45,7 +54,7 @@
             <em>{{data.created|date:'medium'}}</em>
           </span>
 
-          <div class="widgets global">
+          <div class="widgets global" id="global-widgets">
             <span class="col-sm-2 label bg-secondary">Confirmed</span>
             <span class="col-sm-2 offset-1 label bg-warning">Active</span>
             <span class="col-sm-2 offset-1 label bg-success">Recovered</span>
@@ -62,7 +71,6 @@
         </div>
 
       </mat-card>
-
 
     </div>
 
