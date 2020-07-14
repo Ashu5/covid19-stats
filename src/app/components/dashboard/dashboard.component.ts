@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {DataService} from '../../services/data.service';
-import {map} from 'rxjs/operators';
-
+import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
 
 @Component({
   selector: 'app-dashboard',
@@ -10,9 +9,8 @@ import {map} from 'rxjs/operators';
 })
 export class DashboardComponent implements OnInit {
   
-  constructor(private service:DataService) { }
+  constructor(private service:DataService,private spinnerService: Ng4LoadingSpinnerService) { }
   
-ttotal:number=11111;
 indiaCovidData:any[]=[];
 statewiseData:any[]=[];
 globalCovidDataArray:any[]=[];
@@ -21,17 +19,20 @@ globalCovidDataArray:any[]=[];
     this.service.getIndiaCovidData()
 
     .subscribe((responseData)=>{
+      
       this.indiaCovidData.push(responseData['data']['total']);
       this.statewiseData.push(responseData['data']);
       console.log("Total India Data-",this.indiaCovidData);
-      console.log("StateWise Data-",this.statewiseData)
+      //console.log("StateWise Data-",this.statewiseData[0]['statewise']);
     
     });
   }
 
   getGlobalData(){
+    this.spinnerService.show();
     this.service.getGlobalCovidData()
     .subscribe((responseData)=>{
+      this.spinnerService.hide();
     this.globalCovidDataArray.push(responseData);
     console.log("Global Data",this.globalCovidDataArray);
     });
@@ -39,6 +40,7 @@ globalCovidDataArray:any[]=[];
  
   
   ngOnInit() {
+    
     this.getData();
     this.getGlobalData();
   }

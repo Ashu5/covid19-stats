@@ -10,6 +10,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 import {MatTableModule} from '@angular/material/table';
 import { GlobaldataComponent } from './components/globaldata/globaldata.component';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
+import {MatSortModule} from '@angular/material/sort';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +28,10 @@ import { GlobaldataComponent } from './components/globaldata/globaldata.componen
     HttpClientModule,
     BrowserAnimationsModule,
     MatCardModule,
-    MatTableModule
+    MatTableModule,
+    MatProgressBarModule,
+    Ng4LoadingSpinnerModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]

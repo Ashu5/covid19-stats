@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <div class="d-flex">
-    <mat-card>
+    <mat-card *ngIf="statewiseData else loading">
       <div *ngFor="let data of statewiseData">
         <span class="country">India</span>
         <span class=" live badge badge-success">Live</span>
@@ -22,9 +22,16 @@
           <span class="data-label">{{data.deaths | number: '1.0':'en-UK'}}</span>
         </div>
 
+
+
+
       </div>
+      <ng-template #loading>
+        <img src="../../../assets/spinner.gif">
+      </ng-template>
 
     </mat-card>
+
 
 
     <div class="mat"></div>
@@ -61,9 +68,8 @@
 
   </div>
 
-  <div class="row">
-    <h3>CountryWise Data</h3>
-   <app-globaldata></app-globaldata>
-  </div>
+
+  <app-globaldata></app-globaldata>
+
   <!--container ends-->
 </div>

@@ -10,26 +10,30 @@ import { DataService } from '../../services/data.service';
 export class GlobaldataComponent implements OnInit {
 
 
-  displayedColumns: string[] = ['country', 'confirmed', 'recovered', 'deaths'];
+  displayedColumns: string[] = ['state', 'confirmed', 'recovered', 'deaths'];
   //databyCountryArray:any[]=[];
   constructor(private service: DataService) { }
-  dataSource:any[];
+  dataSource: any[];
   ELEMENT_DATA: any[] = [];
-  
-  getCovidDataByCountry() {
-    this.service.getCovidDataByCountry()
-      .subscribe((responseData: any) => {
-        for (let i = 0; i < 10; i++) {
-          this.ELEMENT_DATA.push(responseData[i]);
-        }
-        this.dataSource = this.ELEMENT_DATA;
 
-        console.log("ElementData", this.ELEMENT_DATA);
+
+  getData() {
+    this.service.getIndiaCovidData()
+
+      .subscribe((responseData) => {
+       for(let i=0;i<30;i++){
+        this.ELEMENT_DATA.push(responseData['data']['statewise'][i]);
+         this.dataSource = this.ELEMENT_DATA;
+       }
+        console.log("India StateWise Data-",  this.ELEMENT_DATA);
+
       });
   }
-  
+
+
   ngOnInit() {
-    this.getCovidDataByCountry();
+    this.getData();
+   
   }
 
 }

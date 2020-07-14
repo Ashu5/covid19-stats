@@ -1,4 +1,27 @@
 table{
-    width: 55%;
+    width: 100%;
     margin-top: 10px;
+    overflow: scroll;
+
+}
+.data-table {
+    height: 400px;
+    overflow: auto;
+    margin-bottom: 15px;
+  }
+h3{
+    font-family: monospace;
+      font-size: 20px;
+      background-color: darkslategray;
+      margin-left: 9px;
+      margin-top: 10px;
+      width: 32%;
+      color: white;
+      border-radius: 13px;
+      text-align: center;
+  }
+  .row{
+    display:block;
+    margin-left: 0px;
+    width: 33%;
 }
