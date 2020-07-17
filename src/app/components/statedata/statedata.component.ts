@@ -3,11 +3,11 @@ import { DataService } from '../../services/data.service';
 
 
 @Component({
-  selector: 'app-globaldata',
-  templateUrl: './globaldata.component.html',
-  styleUrls: ['./globaldata.component.scss']
+  selector: 'app-statedata',
+  templateUrl: './statedata.component.html',
+  styleUrls: ['./statedata.component.scss']
 })
-export class GlobaldataComponent implements OnInit {
+export class StatedataComponent implements OnInit {
 
 
   displayedColumns: string[] = ['state', 'confirmed', 'recovered', 'deaths'];

@@ -9,7 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 import {MatTableModule} from '@angular/material/table';
-import { GlobaldataComponent } from './components/globaldata/globaldata.component';
+import { StatedataComponent } from './components/statedata/statedata.component';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
 import {MatSortModule} from '@angular/material/sort';
@@ -21,7 +21,7 @@ import { ChartsModule } from 'ng2-charts';
     HeaderComponent,
     FooterComponent,
     DashboardComponent,
-    GlobaldataComponent,
+    StatedataComponent,
     ChartComponent
     
   ],
